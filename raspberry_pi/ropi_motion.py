@@ -356,6 +356,8 @@ COMMANDS = {
     "wave": wave_both,
     "waveleft": wave_left,
     "waveright": wave_right,
+    "spindance": spin_dance,
+    "dance": robot_dance,
 }
 
 
