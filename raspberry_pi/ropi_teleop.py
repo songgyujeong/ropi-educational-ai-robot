@@ -162,10 +162,6 @@ def main():
             k = key.lower() if len(key) == 1 else key
 
             # --- 주행 ---
-            elif k == "z":
-                do_attack(m.spin_dance, "Spin Dance")
-            elif k == "x":
-                do_attack(m.robot_dance, "Robot Dance")
             if k in ("UP", "w"):
                 go(m.forward, "전진")
             elif k in ("DOWN", "s"):
@@ -241,6 +237,12 @@ def main():
                 print("  저장:", m.save_settings()); status()
             elif k == "?":
                 print(HELP); status()
+            elif k == "z":
+                do_attack(m.spin_dance, "Spin Dance")
+
+            elif k == "c":
+                do_attack(m.robot_dance, "Robot Dance")
+
             elif k == "x":
                 break
             elif k in ("\r", "\n"):
