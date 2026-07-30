@@ -1,6 +1,6 @@
 """ROPI 키보드 조종.
 
-방향키(또는 WASD)로 주행하고, 어깨 모터로 공격한다.
+방향키(또는 WASD)로 주행하고, 어깨 모터`로 공격한다.
 
 두 가지 모드가 있다.
   HOLD  - 키를 누르고 있는 동안만 움직인다. 떼면 멈춘다. (기본값)
@@ -162,6 +162,10 @@ def main():
             k = key.lower() if len(key) == 1 else key
 
             # --- 주행 ---
+            elif k == "z":
+                do_attack(m.spin_dance, "Spin Dance")
+            elif k == "x":
+                do_attack(m.robot_dance, "Robot Dance")
             if k in ("UP", "w"):
                 go(m.forward, "전진")
             elif k in ("DOWN", "s"):
